@@ -11,13 +11,15 @@ public class NestedLoop_2341760117 {
             }
             System.out.println();
         }
-        int kota = 1 ;
-        for (double[]kotaTemps : temps ){
-            kota ++;
-            for (double suhu : kotaTemps){
-                System.out.print(suhu + " ");
+        for (int i = 0; i < temps.length; i++){
+            System.out.println("Kota ke-" + (i + 1) + ": ");
+            double rata = 0;
+            for (double temp : temps[i]){
+                rata += temp;
+                System.out.print(temp + " ");
             }
-            System.out.println();
+            double average = rata/ temps[i].length;
+            System.out.println("Rata-Rata: " + average);
         }
     sc.close();
     }
